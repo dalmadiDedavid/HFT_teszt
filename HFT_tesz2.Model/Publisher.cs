@@ -17,11 +17,18 @@ namespace HFT_tesz2.Model
         [Required]
         [MaxLength(12)]
         public string Name { get; set; }
-        
+
+        public DateTime LaunchDate { get; set; }
+
+        public string Platform { get; set; }
+
         [NotMapped]
-        public Game Game { get; set; }
+        public virtual Game Game { get; set; }
 
         [ForeignKey(nameof(Game))]
         public int GameId { get; set; }
+
+
+
     }
 }

@@ -21,6 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HFT_teszt2.Test", "HFT_tesz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HFT_teszt2.Endpoint", "HFT_teszt2.Endpoint\HFT_teszt2.Endpoint.csproj", "{905F095D-FC82-4B2E-A740-155C4CFF0B9B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Other", "Other", "{666A785C-3F1F-4281-A19E-6DF24744171E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

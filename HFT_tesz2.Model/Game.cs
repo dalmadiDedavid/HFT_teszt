@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 namespace HFT_tesz2.Model
 {
@@ -21,8 +22,10 @@ namespace HFT_tesz2.Model
         [Range(5000,20000)]
         public int Price { get; set; }
 
+        public virtual ICollection<DevelopersTeam> Tdev { get; set; }
+
         [NotMapped]
-        public DevelopersTeam Dev { get; set; }
+        public virtual DevelopersTeam dev { get; set; }
 
         [ForeignKey(nameof(DevelopersTeam))]
         public int DevId { get; set; }

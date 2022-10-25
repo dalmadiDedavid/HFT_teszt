@@ -20,6 +20,9 @@ namespace HFT_tesz2.Model
         [MaxLength(12)]
         public string Country { get; set; }
         [Range(20, 1000)]
+        
         public int CountofMembers { get; set; }
+
+        public DateTime Founded { get; set; }
     }
 }

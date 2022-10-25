@@ -13,7 +13,7 @@ namespace HFT_teszt2.Client
             GameDbContext ctx = new GameDbContext();
 
             
-            var item = ctx.Game.ToArray();
+            var item = ctx.DevTeam.ToArray();
             ;
         }
     }
