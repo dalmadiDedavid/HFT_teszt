@@ -6,11 +6,11 @@ using System.Collections.Generic;
 namespace HFT_tesz2.Model
 {
     [Table("Game")]
-    public class Game
+    public class Game : Entity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int GameId { get; set; }
+        public override int Id { get; set; }
         [Required]
         [MaxLength(20)]
         public string GName { get; set; }
@@ -22,12 +22,18 @@ namespace HFT_tesz2.Model
         [Range(5000,20000)]
         public int Price { get; set; }
 
-        public virtual ICollection<DevelopersTeam> Tdev { get; set; }
+        //public virtual ICollection<DevelopersTeam> Tdev { get; set; }
 
         [NotMapped]
-        public virtual DevelopersTeam dev { get; set; }
+        public virtual DevelopersTeam Developers { get; set; }
 
         [ForeignKey(nameof(DevelopersTeam))]
         public int DevId { get; set; }
+
+        [NotMapped]
+        public virtual Publisher Publisher { get; set; }
+
+        [ForeignKey(nameof(Publisher))]
+        public int PubId { get; set; }
     }
 }

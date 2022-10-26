@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 namespace HFT_tesz2.Model
 {
     [Table("Developers Team")]
-    public class DevelopersTeam
+    public class DevelopersTeam: Entity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int DevId { get; set; }
+        public override int Id { get; set; }
         [Required]
         [MaxLength(20)]
         public string Name { get; set; }
@@ -24,5 +24,8 @@ namespace HFT_tesz2.Model
         public int CountofMembers { get; set; }
 
         public DateTime Founded { get; set; }
+
+        [NotMapped]
+        public virtual ICollection<Game> Games { get; set; }
     }
 }

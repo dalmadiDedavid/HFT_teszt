@@ -12,9 +12,19 @@ namespace HFT_teszt2.Client
 
             GameDbContext ctx = new GameDbContext();
 
+            var item = ctx.Publishers.ToArray();
+            for (int i = 0; i < item.Length; i++)
+            {
+                Console.WriteLine(item[i].Name);
+            }
+
+            var cuccok = item[0].Games.ToArray();
+            for (int i = 0; i < cuccok.Length; i++)
+            {
+                Console.WriteLine(cuccok[i].GName);
+            }
             
-            var item = ctx.DevTeam.ToArray();
-            ;
+            
         }
     }
 }

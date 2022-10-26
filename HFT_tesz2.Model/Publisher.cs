@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 namespace HFT_tesz2.Model
 {
     [Table("Publisher")]
-    public class Publisher
+    public class Publisher: Entity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int PubId { get; set; }
+        public override int Id { get; set; }
         [Required]
         [MaxLength(12)]
         public string Name { get; set; }
@@ -27,6 +27,8 @@ namespace HFT_tesz2.Model
 
         [ForeignKey(nameof(Game))]
         public int GameId { get; set; }
+
+        public virtual ICollection<Game> Games { get; set; }
 
 
 
