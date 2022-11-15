@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -8,6 +8,11 @@
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.15" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.15" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.15" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\HFT_tesz2.Model\HFT_tesz2.Model.csproj" />
+	  <ProjectReference Include="..\HFT_tesz2.Repository\HFT_tesz2.Repository.csproj" />
 	</ItemGroup>
 
 </Project>

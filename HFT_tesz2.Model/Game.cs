@@ -22,6 +22,8 @@ namespace HFT_tesz2.Model
         [Range(5000,20000)]
         public int Price { get; set; }
 
+       
+
         //public virtual ICollection<DevelopersTeam> Tdev { get; set; }
 
         [NotMapped]
